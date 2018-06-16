@@ -25,7 +25,7 @@ _url = 'http://www.ipeen.com.tw/search/all/000/1-0-0-0/?p={}&adkw=%E5%8F%B0%E5%8
 
 
 submit_queue = []
-get_result_queue = []
+# get_result_queue = []
 
 def get_urls(url):
     resp = requests.get(url, headers=headers)

@@ -4,8 +4,8 @@ import re
 from pprint import pprint
 from datetime import datetime
 import time
-start_time = datetime.now().time()
-path = './data/restaurant_urls_{}.txt'
+start_time = time.time()
+path = './data_test/single_thread_restaurant_urls_{}.txt'
 today = datetime.today().date()
 headers = json.loads(r'''{
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -36,8 +36,6 @@ while True:
             f.write(url+'\n')
     i += 1
 
-
-
-end_time = datetime.now().time()
+end_time = time.time()
 time_cost = end_time - start_time
 print(time_cost)
