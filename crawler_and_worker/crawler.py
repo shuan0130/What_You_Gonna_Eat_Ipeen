@@ -1,11 +1,10 @@
-
 from celery import Celery
 import requests
 import json
 import re
 from datetime import datetime
 
-app = Celery('crawler', broker='amqp://guest:guest@localhost/')
+app = Celery('crawler', broker='amqp://guest:guest@localhost:15672')
 
 @app.task
 def get_urls(url,path):

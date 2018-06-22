@@ -18,6 +18,3 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
     for future in concurrent.futures.as_completed(list_queue):
         future.result()
         print(future.result())
-
-
-    # print(list_queue)
