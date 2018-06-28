@@ -10,9 +10,10 @@ http://docs.celeryproject.org/en/latest/index.html
 
 Run the container of Rabbitmq
 
-<br><4_celery_detail_parser>
+<br><6_celery_urls_parser>
 <br>docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
-<br>celery crawler work
+<br>celery -A crawler worker --loglevel=info
+
 <br>
 <br># Result:
 <br>Muti: 236.22525095939636
